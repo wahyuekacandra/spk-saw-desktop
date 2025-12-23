@@ -1,0 +1,51 @@
+{
+  "kriteriaList": [
+    {
+      "kode": "C1",
+      "nama": "HARGA",
+      "bobot": 0.3,
+      "jenis": "cost"
+    },
+    {
+      "kode": "C2",
+      "nama": "RAM",
+      "bobot": 0.3,
+      "jenis": "benefit"
+    },
+    {
+      "kode": "C3",
+      "nama": "CPU",
+      "bobot": 0.4,
+      "jenis": "benefit"
+    }
+  ],
+  "alternatifList": [
+    {
+      "kode": "A1",
+      "nama": "SAMSUNG",
+      "nilai": {
+        "C1": 2000000.0,
+        "C2": 8.0,
+        "C3": 3.5
+      }
+    },
+    {
+      "kode": "A2",
+      "nama": "OPPO",
+      "nilai": {
+        "C1": 3000000.0,
+        "C2": 6.0,
+        "C3": 2.5
+      }
+    },
+    {
+      "kode": "A3",
+      "nama": "ASUS",
+      "nilai": {
+        "C1": 5000000.0,
+        "C2": 3.0,
+        "C3": 8.0
+      }
+    }
+  ]
+}

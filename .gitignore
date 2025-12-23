@@ -1,0 +1,67 @@
+# Build outputs
+bin/
+build/
+build-portable/
+dist/
+dist-single-exe/
+installer-build/
+installer-output/
+jpackage-input/
+native-exe-output/
+simple-installer/
+standalone-temp/
+temp/
+
+# Distribution packages
+SPK-SAW-Portable/
+SPK-SAW-SingleEXE/
+SPK-SAW/
+SPK-SAW-Standalone/
+*.zip
+*.exe
+*.msi
+
+# IDE
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Java
+*.class
+*.jar
+!lib/*.jar
+*.war
+*.ear
+*.log
+
+# Data
+output/*.txt
+output/*.pdf
+!output/README.md
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# JavaFX (if bundled)
+javafx-sdk*/
+
+# Thumbnails
+thumbnail-preview.html
+SPK-SAW-Logo.png
+SPK-SAW-Logo.ico
+
+# Documentation (generated)
+FINAL-SUMMARY.txt
+PROJECT-SUMMARY.txt
+QUICK-REFERENCE.txt
