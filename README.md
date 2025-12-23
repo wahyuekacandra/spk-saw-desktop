@@ -6,7 +6,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)
 
-Aplikasi desktop **Sistem Pendukung Keputusan (SPK)** menggunakan metode **Simple Additive Weighting (SAW)** untuk membantu pengambilan keputusan multi-kriteria. Aplikasi ini menyediakan interface yang user-friendly, perhitungan otomatis, dan multiple opsi distribusi.
+Aplikasi desktop **Sistem Pendukung Keputusan (SPK)** menggunakan metode **Simple Additive Weighting (SAW)** untuk membantu pengambilan keputusan multi-kriteria. Aplikasi ini menyediakan interface yang user-friendly dengan perhitungan otomatis.
 
 ## 📋 Deskripsi
 
@@ -54,7 +54,7 @@ cd spk-saw-desktop
 
 ### Setup JavaFX
 1. Download JavaFX SDK 17 dari [https://gluonhq.com/products/javafx/](https://gluonhq.com/products/javafx/)
-2. Extract ke `C:\javafx-sdk-17` (atau edit path di `build.bat` dan `run.bat`)
+2. Extract ke `C:\javafx-sdk-17` (atau edit path di `run.bat`)
 
 ### Build Project
 
@@ -71,86 +71,7 @@ Aplikasi akan:
 - Menampilkan GUI JavaFX
 - Siap digunakan untuk input dan perhitungan SAW
 
-## 📦 Distribution
-
-Project ini menyediakan **4 opsi distribusi** dengan build scripts yang sudah siap pakai:
-
-### 1. 📁 Portable Package
-```bash
-create-portable.bat
-```
-**Output:** Folder `SPK-SAW-Portable/`
-- ✅ No installation needed
-- ✅ Run from USB drive
-- ✅ Size: ~50MB
-- ✅ Includes: Compiled app + JavaFX libs + launcher scripts
-- ⚠️ Requires: Java 11+ on target PC
-
-### 2. 💎 Single EXE Package ⭐ **Recommended**
-```bash
-create-single-exe.bat
-```
-**Output:** Folder `SPK-SAW-SingleEXE/`
-- ✅ Native Windows EXE (Launch4j wrapper)
-- ✅ Professional icon embedded
-- ✅ Auto Java detection
-- ✅ Includes all JavaFX native libraries (DLLs)
-- ✅ Size: ~50MB
-- ⚠️ Requires: Java 11+ on target PC
-
-**Features:**
-- Native `SPK-SAW.exe` executable
-- All dependencies included (Gson, iText, JavaFX JARs & DLLs)
-- Silent execution (no console window)
-- Professional Windows integration
-
-### 3. 🚀 Standalone (Self-Contained)
-```bash
-create-standalone.bat
-```
-**Output:** Folder `SPK-SAW/`
-- ✅ **NO Java installation required** - Runtime bundled!
-- ✅ Self-contained application
-- ✅ Works on ANY Windows 10/11
-- ✅ Created with jpackage
-- ✅ Size: ~150-200MB (includes JRE)
-
-**Perfect for users who don't have Java installed!**
-
-### 4. 💿 Windows Installer
-```bash
-create-installer-single-exe.bat
-```
-**Output:** `installer-output/SPK-SAW-Installer.exe`
-- ✅ Professional Windows installer (Inno Setup)
-- ✅ Install wizard with UI
-- ✅ Auto create shortcuts (Start Menu, Desktop)
-- ✅ Java detection & warning
-- ✅ Uninstaller included
-- ✅ Size: ~33MB
-- ⚠️ Requires: Inno Setup to build, Java 11+ to run
-
-**Install to:** `C:\Program Files\SPK-SAW`
-
 ---
-
-### 📊 Distribution Comparison
-
-| Feature | Portable | Single EXE | Standalone | Installer |
-|---------|----------|------------|------------|-----------|
-| **Size** | ~50MB | ~50MB | ~150-200MB | ~33MB |
-| **Java Required** | ✅ Yes | ✅ Yes | ❌ No | ✅ Yes |
-| **Installation** | ❌ No | ❌ No | ❌ No | ✅ Yes |
-| **Professional** | ⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐⭐ |
-| **Easy Deploy** | ⭐⭐⭐ | ⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐ |
-| **Best For** | Testing | Distribution | No Java PCs | Enterprise |
-
-### 🎯 Recommendation
-
-- **For users WITH Java:** Use **Single EXE** ⭐
-- **For users WITHOUT Java:** Use **Standalone** 🚀
-- **For enterprise deployment:** Use **Installer** 💿
-- **For quick testing:** Use **Portable** 📁
 
 ## 📁 Project Structure
 
@@ -173,16 +94,18 @@ spk-saw-desktop/
 │   └── util/                         # Utilities
 │       └── StyleHelper.java          # UI styling helper
 ├── data/                             # JSON data storage
-│   └── data.json                     # Persisted data
-├── output/                           # Generated PDF reports
-│   └── Hasil_SAW_*.txt               # Export files
+│   ├── data.json                     # Persisted data
+│   └── README.md                     # Data folder documentation
+├── output/                           # Generated reports folder
+│   └── README.md                     # Output folder documentation
 ├── resources/                        # Application assets
 │   └── icons/                        # Application icons
 │       ├── app-icon.png              # Main icon (PNG)
 │       └── app-icon.ico              # Windows icon (ICO)
 ├── lib/                              # External libraries
 │   ├── gson-2.10.1.jar               # JSON serialization
-│   └── itext-2.1.7.jar               # PDF generation
+│   ├── itext-2.1.7.jar               # PDF generation
+│   └── README.md                     # Library documentation
 ├── run.bat                           # Development launcher (JavaFX required)
 ├── .gitignore                        # Git ignore rules
 └── README.md                         # This file (Project documentation)
@@ -206,8 +129,8 @@ Update path ini sesuai lokasi JavaFX SDK di komputer Anda.
 - Uses **Singleton Pattern** for optimal performance
 
 ### Export Location
-- PDF reports saved to `output/` folder
-- Filename format: `Hasil_SAW_YYYYMMDD_HHMMSS.txt`
+- Export reports will be saved to `output/` folder
+- Export feature available in the application (PDF/TXT format)
 
 ---
 
