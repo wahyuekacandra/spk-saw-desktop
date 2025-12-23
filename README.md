@@ -247,8 +247,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - [JavaFX](https://openjfx.io/) - Modern GUI framework for Java
 - [Google Gson](https://github.com/google/gson) - JSON serialization/deserialization
 - [iText 2.1.7](https://github.com/ymasory/iText-4.2.0) - PDF generation library
-- [Launch4j](http://launch4j.sourceforge.net/) - Windows native launcher
-- [Inno Setup](https://jrsoftware.org/isinfo.php) - Professional installer creator
 
 ---
 
