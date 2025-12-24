@@ -91,7 +91,7 @@ public class Main extends Application {
         Scene scene = new Scene(root, 1000, 700);
         
         // Set Stage
-        primaryStage.setTitle("SPK - Metode SAW");
+        primaryStage.setTitle("Sistem Pendukung Keputusan");
         primaryStage.setScene(scene);
         primaryStage.setMinWidth(800);
         primaryStage.setMinHeight(600);

@@ -1,4 +1,4 @@
-# 🎯 SPK-SAW Desktop Application
+# 🎯 Sistem Pendukung Keputusan
 
 ![Java](https://img.shields.io/badge/Java-17+-blue.svg)
 ![JavaFX](https://img.shields.io/badge/JavaFX-17-orange.svg)
@@ -6,11 +6,11 @@
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen.svg)
 
-Aplikasi desktop **Sistem Pendukung Keputusan (SPK)** menggunakan metode **Simple Additive Weighting (SAW)** untuk membantu pengambilan keputusan multi-kriteria. Aplikasi ini menyediakan interface yang user-friendly dengan perhitungan otomatis.
+Aplikasi desktop **Sistem Pendukung Keputusan** menggunakan metode **Simple Additive Weighting (SAW)** untuk membantu pengambilan keputusan multi-kriteria. Aplikasi ini menyediakan interface yang user-friendly dengan perhitungan otomatis.
 
 ## 📋 Deskripsi
 
-Aplikasi SPK-SAW Desktop adalah solusi berbasis Java yang mengotomatisasi perhitungan metode SAW untuk pengambilan keputusan. Dengan interface yang user-friendly dan fitur export yang lengkap, aplikasi ini cocok untuk berbagai kasus penggunaan seperti seleksi karyawan, pemilihan supplier, evaluasi kinerja, dan lainnya.
+Aplikasi Sistem Pendukung Keputusan adalah solusi berbasis Java yang mengotomatisasi perhitungan metode SAW untuk pengambilan keputusan. Dengan interface yang user-friendly dan fitur export yang lengkap, aplikasi ini cocok untuk berbagai kasus penggunaan seperti seleksi karyawan, pemilihan supplier, evaluasi kinerja, dan lainnya.
 
 ## ✨ Fitur Utama
 
@@ -58,7 +58,13 @@ cd spk-saw-desktop
 
 ### Build Project
 
-⚠️ **Note**: Project ini sudah dalam bentuk source code yang siap dijalankan. File `.class` sudah di-compile dan ada di dalam repository.
+Untuk compile aplikasi dari source code:
+
+```bash
+mkdir bin
+javac -d bin -cp "lib\*" --module-path "C:\javafx-sdk-17\lib" --add-modules javafx.controls -encoding UTF-8 src\Main.java src\controller\*.java src\model\*.java src\service\*.java src\util\*.java
+xcopy /E /I /Y resources bin\resources
+```
 
 ### Run Application
 
@@ -295,6 +301,6 @@ If this project helped you, please give it a ⭐ on [GitHub](https://github.com/
 
 **Made with ❤️ for Decision Support System Course**
 
-**© 2025 SPK-SAW Desktop Application**
+**© 2025 Sistem Pendukung Keputusan**
 
 </div>
